@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>day1 - Categories</title>
+    <!-- <meta name="viewport" content="width=device-width, intial-scale=1.0"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <link rel="stylesheet" href="day1.css">
+</head>
+
+<body>
+    <section>
+        <!---------------------------------------------category bar----------------------------------------->
+        <div class="bar">
+            <button data-mark="all" class="active">All</button>
+            <button data-mark="awesome">Awesome</button>
+            <button data-mark="responsive">Responsive</button>
+            <button data-mark="animated">Animated</button>
+        </div>
+
+
+        <!---------------------------------------------content of category----------------------------------------->
+        <div class="row show" id="all">
+            <!-- <div class="container">
+                <img />
+                <div class="layer">
+                    <i class="fa fa-magnifying-glass"></i>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="row" id="awesome"></div>
+        <div class="row" id="responsive"></div>
+        <div class="row" id="animated"></div>
+
+
+        <div class="down">
+            <img src="images/19.jpg">
+            <img src="images/32.jpg">
+            <img src="images/15.jpg">
+            <img src="images/31.jpg">
+        </div>
+    </section>
+
+
+
+
+
+    <!--------------------------------------modal   =>   display:none---------------------------------->
+    <div class="modal">
+        <button class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <button id="prev">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <img class="modal-pic">
+        <button id="next">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+
+
+    <!-------------------------------java script-------------------------------------------->
+    <script src="day1.js"></script>
+</body>
+
+</html>

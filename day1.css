@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+/*---------------------------bar category------------------------------*/
+.bar {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.bar button {
+    /* width: 200px; */
+    padding: 10px 35px;
+    font-size: 15px;
+    background-color: #fff;
+    border: 1px solid rgb(23, 90, 148);
+    color: rgb(23, 90, 148);
+    margin: 0 20px;
+}
+
+.bar button:hover,
+.active {
+    background-color: rgb(70, 150, 220) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------------------content--------------------------*/
+.row {
+    width: 85%;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    display: none;
+}
+
+.container {
+    position: relative;
+    /* overflow: hidden; */
+    animation-name: animate-pop;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-duration: 0.5s;
+}
+
+@keyframes animate-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+
+
+.container img {
+    width: 100%;
+}
+
+
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.layer:hover {
+    background: rgb(177, 171, 153, 0.7);
+}
+
+.layer .fa {
+    color: #fff;
+    font-size: 25px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover .fa {
+    bottom: 50%;
+    opacity: 1;
+}
+
+
+.show {
+    display: grid !important;
+}
+
+.down {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    display: none;
+}
+
+.down img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/*-----------------------modal-----------------------*/
+.modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+
+.modal button {
+    background-color: transparent;
+    border: 2px solid #ccc;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.modal button:hover {
+    background-color: #000;
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+#next {
+    position: absolute;
+    right: 30px;
+    top: 45%;
+    padding: 15px;
+}
+
+#prev {
+    position: absolute;
+    left: 30px;
+    top: 45%;
+    padding: 15px;
+}
+
+.modal-pic {
+    height: 95vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* transition: 0.3s left ease-in-out; */
+}
